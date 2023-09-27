@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome Page</title>
+    <style>
+        * {
+            background-image: url(istockphoto.jpg);
+            padding: 0;
+            justify-content: center;
+            text-align: center;
+        }
+        
+        h1 {
+            color: rgb(0, 0, 11);
+            font-family: monospace;
+            font-size: 250%;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        let params = (new URL(document.location)).searchParams;
+        let name = params.get("firstName");
+        let regNum = params.get("regNum");
+        let age = params.get("age");
+    </script>
+    <h1>Welcome
+        <script>
+            document.write(name)
+        </script>
+    </h1>
+    <p>Your registration number is
+        <script>
+            document.write(regNum)
+        </script>. You are
+        <script>
+            document.write(age)
+        </script> years old.</p>
+</body>
+
+</html>
